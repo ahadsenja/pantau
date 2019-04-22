@@ -2,7 +2,7 @@ import requests
 import time
 
 
-class Keeper(object):
+class Crawler(object):
     """
     """
 

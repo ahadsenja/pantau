@@ -24,8 +24,8 @@ class Parser(object):
             region_data.append(obj)
 
         return {
-            'ts': self._data['ts'],
-            'data': region_data
+            'time_server': self._data['ts'],
+            'votings': region_data
         }
 
     def parse_to_csv_format(self):
