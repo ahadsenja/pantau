@@ -1,5 +1,8 @@
-import requests
 import time
+
+import requests
+
+from utils import Utils
 
 
 class Crawler(object):
@@ -23,6 +26,9 @@ class Crawler(object):
         """
         req = requests.get(self._tagret_url, verify=self._verify_ssl)
         try:
-            return req.json()
+            json = req.json()
+            Utils.save_json_to_file(json['ts'], json)
+
+            return json
         except requests.exceptions.RequestException as err:
             print(err)
