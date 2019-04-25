@@ -9,7 +9,7 @@ if __name__ == "__main__":
     import time
 
     TARGET_URL = 'https://pemilu2019.kpu.go.id/static/json/hhcw/ppwp.json'
-    API_URL = 'http://35.187.254.66:2019/api/pemilu2019/save'
+    API_URL = 'https://pantausintungkpu.web.id/api/pemilu2019/save'
     AUTH_TOKEN = os.environ['AUTH_TOKEN']
 
     try:

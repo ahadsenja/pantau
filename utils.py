@@ -19,7 +19,7 @@ class Utils:
 
     @staticmethod
     def save_json_to_file(folder_name: str, text: dict):
-        path = os.path.join(os.getcwd(), '../ppwp_file')
+        path = os.path.join(os.getcwd(), 'ppwp_file')
         folder_path = os.path.join(path, folder_name)
         if not os.path.isdir(folder_path):
             os.mkdir(folder_path)
