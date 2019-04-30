@@ -25,6 +25,10 @@ class Parser(object):
 
         return {
             'time_server': self._data['ts'],
+            'total_nolsatu': float(self._data['chart'][self._key1]),
+            'total_noldua': float(self._data['chart'][self._key2]),
+            'process_tps': float(self._data['progress']['proses']),
+            'total_tps': float(self._data['progress']['total']),
             'votings': region_data
         }
 

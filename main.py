@@ -24,6 +24,7 @@ if __name__ == "__main__":
         parser = Parser(data)
         res_data = parser.parse()
 
+        # print(res_data)
         sender = Sender(API_URL, AUTH_TOKEN)
         req = sender.send(res_data)
 
