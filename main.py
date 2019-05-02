@@ -7,6 +7,7 @@ if __name__ == "__main__":
     import os
     import sys
     import time
+    from datetime import datetime
 
     TARGET_URL = 'https://pemilu2019.kpu.go.id/static/json/hhcw/ppwp.json'
     API_URL = 'https://pantausintungkpu.web.id/api/pemilu2019/save'
@@ -28,6 +29,6 @@ if __name__ == "__main__":
         sender = Sender(API_URL, AUTH_TOKEN)
         req = sender.send(res_data)
 
-        print(f'Code {req.status_code}')
+        print(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}, Code {req.status_code}")
 
         time.sleep(TIME_SLEEP)
